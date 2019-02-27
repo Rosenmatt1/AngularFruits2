@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+ .fruit_box{
+    float: left;
+    margin: 20px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .fruit_box div{
+    display:block;
+  }
+  
+  img.fruit{
+    width: 30px;
+    display:block;
+    clear:both;
+    margin: 1px;
+  }
+  
+  footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 20px;
+    background-color: #333;
+    color: white;
+  
+  }
