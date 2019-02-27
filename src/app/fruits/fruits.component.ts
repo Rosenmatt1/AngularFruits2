@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'fruit-loop',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FruitsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data:DataService) { }
 
   ngOnInit() {
+    this.loadFruits()
+  }
+
+  fruits:{};
+
+  loadFruits() {
+    this.data.getFruits().subscribe(payload => {
+      this.fruits = payload
+      console.log(payload)
+    })
   }
 
 }
